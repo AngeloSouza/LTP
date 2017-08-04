@@ -12,7 +12,7 @@ public class Ex4 {
         Scanner leia = new Scanner(System.in);
         System.out.println("informe o valor de A ");
         int a=leia.nextInt();
-        System.out.println("informe o valor de B");
+        System.out.println("informe o valor de B ");
         int b=leia.nextInt();
         
         a+=b;
@@ -20,10 +20,6 @@ public class Ex4 {
         a=a-b;
                 
 
-
-       // System.out.print("A é: "+ a +" e B é: "+ b);
-        System.out.println(a);
-        System.out.println(b);
-
+        System.out.print("A é: "+ a +" e B é: "+ b);
     }
 }
