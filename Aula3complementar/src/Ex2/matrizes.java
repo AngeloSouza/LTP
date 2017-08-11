@@ -9,27 +9,38 @@ public class matrizes {
         int[][] num2 = new int[5][2];
         int[][] resp = new int[4][2];
         Random rand = new Random();
-        for (int i = 0; i < num1.length; i++) {
-            for (int j = 0; j < num1[i].length; j++) {
-                num1[i][j] = rand.nextInt(10);
-                System.out.print(num1[i][j]+" ");
+        for (int[] num11 : num1) {
+            for (int j = 0; j < num11.length; j++) {
+                num11[j] = rand.nextInt(10);
+                System.out.print(num11[j] + " ");
             }
             System.out.println("");
         }
         System.out.println("");
-        for (int i = 0; i < num2.length; i++) {
-            for (int j = 0; j < num2[i].length; j++) {
-                num2[i][j] = rand.nextInt(10);
-                System.out.print(num2[i][j]+" ");
+        for (int[] num21 : num2) {
+            for (int j = 0; j < num21.length; j++) {
+                num21[j] = rand.nextInt(10);
+                System.out.print(num21[j] + " ");
             }
             System.out.println("");
         }
-        
-        for (int i = 0; i < resp.length; i++) {
-            for (int j = 0; j < resp[i].length; j++) {
-                
+        System.out.println("");
+        int aux=1;
+        for (int i = 0; i < resp[i].length; i++) {
+            for (int j = 0; j < resp.length; j++) {
+                for (int k = 0; k < num1.length; k++) {
+                    aux*=num1[i][k];
+                }
+                resp[j][i]=num2[j][i]*aux;
+                aux=1;
             }
             
+        }
+        for (int[] resp1 : resp) {
+            for (int j = 0; j < resp1.length; j++) {
+                System.out.print(resp1[j] + " ");
+            }
+            System.out.println("");
         }
 
     }
